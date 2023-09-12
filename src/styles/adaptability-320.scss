@@ -1,0 +1,87 @@
+@media (max-width: 321px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 31px;
+    padding: 10px 0px 10px 0px;
+
+    .form-inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .form-control {
+        padding: 0px 0px 16px 0px;
+   
+        label {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+    
+        label,
+        input,
+        select {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 18px;
+          width: -webkit-fill-available;
+        }
+      }
+
+      .form-insurance {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 48px;
+
+        span {
+          padding-top: 6.5px;
+        }
+
+        .insurance {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+    
+          height: 32px;
+          width: 58px;
+          background-color: #D1D5DB;
+          border-radius: 32px;
+    
+          border: none;
+    
+          .insurance-circle {
+            width: 28px;
+            height: 28px;
+            margin: 2px;
+    
+            background-color: #FFFFFF;
+    
+            border-radius: 28px;
+    
+            box-shadow: 0px 2px 2px 0px #00000040;
+          }
+        }
+      }
+    }
+
+    .form-results {
+      .form-submit {
+        padding: 10px 0px 10px 0px;
+
+        .submit {
+          font-size: 16px;
+          line-height: 19.36px;
+          width: -webkit-fill-available;
+  
+          border-radius: 4px;
+          background-color: #3B82F6;
+          color: #FFFFFF;
+          border: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+
+  .form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+
+  input,
+  select {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Inter';
+    height: 32px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+  }
+
+  input {
+    padding-left: 8px;
+  }
+
+  select {
+    padding-left: 4px;
+  }
+
+  .form-insurance,
+  .form-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .result-sum {
+    font-weight: 600;
+  }
+}

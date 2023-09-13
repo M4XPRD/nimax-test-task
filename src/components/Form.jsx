@@ -16,15 +16,15 @@ const Form = () => {
   };
 
   return (
-    <form className="form">
-      <header className="form-header">
-        <h1>Бронирование номера</h1>
-        <p>{pageTitle[page]}</p>
-      </header>
-
-      {inputsMapping[page]}
-
-    </form>
+    <div className="wrapper">
+      <form className="form">
+        <header className="form-header">
+          <h1>Бронирование номера</h1>
+          <p>{pageTitle[page]}</p>
+        </header>
+        {inputsMapping[page]}
+      </form>
+    </div>
 
   );
 };

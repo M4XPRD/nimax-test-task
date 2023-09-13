@@ -1,7 +1,10 @@
 import Form from './components/Form';
+import FormProvider from './contexts/FormProvider';
 
 const App = () => (
-  <Form />
+  <FormProvider>
+    <Form />
+  </FormProvider>
 );
 
 export default App;

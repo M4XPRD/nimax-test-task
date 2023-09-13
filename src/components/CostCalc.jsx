@@ -21,6 +21,7 @@ const CostCalc = () => {
             Количество взрослых
             <input type="number" id="adults" name="adults" min="0" value={adultsAmount} onChange={(e) => handleFormData(e, 'adultsAmount')} />
           </label>
+          <span className="error">Допущена ошибка</span>
         </div>
 
         <div className="form-control">
@@ -28,6 +29,7 @@ const CostCalc = () => {
             Количество детей от 5 до 12 лет
             <input type="number" id="children5To12" name="children5To12" min="0" value={children5To12} onChange={(e) => handleFormData(e, 'children5To12')} />
           </label>
+          <span className="error">Допущена ошибка</span>
         </div>
 
         <div className="form-control">
@@ -35,6 +37,7 @@ const CostCalc = () => {
             Количество детей до 5 лет
             <input type="number" id="childrenBelow5" name="childrenBelow5" min="0" value={childrenBelow5} onChange={(e) => handleFormData(e, 'childrenBelow5')} />
           </label>
+          <span className="error">Допущена ошибка</span>
         </div>
 
         <div className="form-control">
@@ -53,6 +56,7 @@ const CostCalc = () => {
             Количество ночей
             <input type="number" id="nightsAmount" name="nightsAmount" min="0" value={nightsAmount} onChange={(e) => handleFormData(e, 'nightsAmount')} />
           </label>
+          <span className="error">Допущена ошибка</span>
         </div>
 
         <div className="form-insurance">

@@ -1,9 +1,9 @@
-import Form from './components/Form';
+import MainForm from './components/MainForm';
 import FormProvider from './contexts/FormProvider';
 
 const App = () => (
   <FormProvider>
-    <Form />
+    <MainForm />
   </FormProvider>
 );
 

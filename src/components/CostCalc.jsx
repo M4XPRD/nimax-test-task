@@ -1,23 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import useForm from '../hooks/formHook';
 import countPrice from '../utils/countPrice';
+import shouldDisableButton from '../utils/shouldDisableButton';
 
 const CostCalc = ({ f }) => {
-  const { handleNextPage } = useForm();
-  const inputFocus = useRef();
-
-  useEffect(() => {
-    if (inputFocus.current) {
-      inputFocus.current.focus();
-    }
-  });
-
-  const shouldDisableButton = () => {
-    const conditionOne = JSON.stringify(f.errors) !== '{}';
-    const conditionTwo = !f.values.adultsAmount;
-    const conditionThree = !f.values.nightsAmount;
-    return conditionOne || conditionTwo || conditionThree;
-  };
+  const { handleNextPage, page } = useForm();
 
   return (
     <div className="form-container">
@@ -28,7 +15,6 @@ const CostCalc = ({ f }) => {
             Количество взрослых
             <input
               className={f.errors.adultsAmount && 'input-error'}
-              ref={inputFocus}
               type="number"
               id="adultsAmount"
               name="adultsAmount"
@@ -126,7 +112,7 @@ const CostCalc = ({ f }) => {
           <button
             type="button"
             className="next-button"
-            disabled={shouldDisableButton()}
+            disabled={shouldDisableButton({ f }, page)}
             onClick={() => handleNextPage()}
           >
             Далее

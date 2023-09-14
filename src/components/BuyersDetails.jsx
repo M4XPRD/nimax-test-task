@@ -1,6 +1,6 @@
 import React from 'react';
 import useForm from '../hooks/formHook';
-import shouldDisableButton from '../utils/shouldDisableButton';
+import shouldDisableButton from '../utils/buttons/shouldDisableButton';
 
 const BuyersDetails = ({ f }) => {
   const {

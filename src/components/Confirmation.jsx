@@ -1,6 +1,6 @@
 import React from 'react';
 import useForm from '../hooks/formHook';
-import { pluralizeNights, pluralizeVisitors } from '../utils/pluralizeData';
+import { pluralizeNights, pluralizeVisitors } from '../utils/pluralization/pluralizeData';
 import LoadingAnimation from './LoadingAnimation';
 import useNetwork from '../hooks/networkHook';
 

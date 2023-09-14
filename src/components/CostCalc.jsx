@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import useForm from '../hooks/formHook';
-import countPrice from '../utils/countPrice';
-import shouldDisableButton from '../utils/shouldDisableButton';
+import countPrice from '../utils/price/countPrice';
+import shouldDisableButton from '../utils/buttons/shouldDisableButton';
 
 const CostCalc = ({ f }) => {
   const { handleNextPage, page, buttonText } = useForm();
@@ -30,7 +30,9 @@ const CostCalc = ({ f }) => {
           <label htmlFor="adultsAmount">
             Количество взрослых
             <input
-              className={f.errors.adultsAmount && f.touched.adultsAmount && 'input-error'}
+              className={
+                f.errors.adultsAmount && f.touched.adultsAmount && 'input-error'
+              }
               type="number"
               id="adultsAmount"
               name="adultsAmount"
@@ -42,7 +44,9 @@ const CostCalc = ({ f }) => {
           </label>
           <span
             className={`hidden-error-text ${
-              f.errors.adultsAmount && f.touched.adultsAmount ? 'visible-error-text' : ''
+              f.errors.adultsAmount && f.touched.adultsAmount
+                ? 'visible-error-text'
+                : ''
             }`}
           >
             {f.errors.adultsAmount}
@@ -53,7 +57,11 @@ const CostCalc = ({ f }) => {
           <label htmlFor="children5To12">
             Количество детей от 5 до 12 лет
             <input
-              className={f.errors.children5To12 && f.touched.children5To12 && 'input-error'}
+              className={
+                f.errors.children5To12
+                && f.touched.children5To12
+                && 'input-error'
+              }
               type="number"
               id="children5To12"
               name="children5To12"
@@ -65,7 +73,9 @@ const CostCalc = ({ f }) => {
           </label>
           <span
             className={`hidden-error-text ${
-              f.errors.children5To12 && f.touched.children5To12 ? 'visible-error-text' : ''
+              f.errors.children5To12 && f.touched.children5To12
+                ? 'visible-error-text'
+                : ''
             }`}
           >
             {f.errors.children5To12}
@@ -76,7 +86,11 @@ const CostCalc = ({ f }) => {
           <label htmlFor="childrenBelow5">
             Количество детей до 5 лет
             <input
-              className={f.errors.childrenBelow5 && f.touched.childrenBelow5 && 'input-error'}
+              className={
+                f.errors.childrenBelow5
+                && f.touched.childrenBelow5
+                && 'input-error'
+              }
               type="number"
               id="childrenBelow5"
               name="childrenBelow5"
@@ -88,7 +102,9 @@ const CostCalc = ({ f }) => {
           </label>
           <span
             className={`hidden-error-text ${
-              f.errors.childrenBelow5 && f.touched.childrenBelow5 ? 'visible-error-text' : ''
+              f.errors.childrenBelow5 && f.touched.childrenBelow5
+                ? 'visible-error-text'
+                : ''
             }`}
           >
             {f.errors.childrenBelow5}
@@ -116,7 +132,9 @@ const CostCalc = ({ f }) => {
           <label htmlFor="nightsAmount">
             Количество ночей
             <input
-              className={f.errors.nightsAmount && f.touched.nightsAmount && 'input-error'}
+              className={
+                f.errors.nightsAmount && f.touched.nightsAmount && 'input-error'
+              }
               type="number"
               id="nightsAmount"
               name="nightsAmount"
@@ -128,7 +146,9 @@ const CostCalc = ({ f }) => {
           </label>
           <span
             className={`hidden-error-text ${
-              f.errors.nightsAmount && f.touched.nightsAmount ? 'visible-error-text' : ''
+              f.errors.nightsAmount && f.touched.nightsAmount
+                ? 'visible-error-text'
+                : ''
             }`}
           >
             {f.errors.nightsAmount}
@@ -139,7 +159,7 @@ const CostCalc = ({ f }) => {
           <span>Страховка</span>
           <div
             className={`insurance ${
-              f.errors.insurance && f.touched.insurance ? 'insurance-checked' : ''
+              f.values.insurance ? 'insurance-checked' : ''
             }`}
           >
             <label htmlFor="insurance">
@@ -148,7 +168,6 @@ const CostCalc = ({ f }) => {
                 id="insurance"
                 checked={f.values.insurance}
                 onChange={f.handleChange}
-                onBlur={f.handleBlur}
               />
               <div className="insurance-circle" />
             </label>

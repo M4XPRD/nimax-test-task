@@ -4,7 +4,7 @@ import countPrice from '../utils/countPrice';
 import { pluralizeNights, pluralizeVisitors } from '../utils/pluralizeData';
 
 const Confirmation = ({ f }) => {
-  const { handleNextPage, handlePreviousPage } = useForm();
+  const { handlePreviousPage } = useForm();
 
   return (
     <div className="form-container">
@@ -22,11 +22,10 @@ const Confirmation = ({ f }) => {
 
           <div className="form-next-button">
             <button
-              type="button"
+              type="submit"
               className="next-button"
-              onClick={() => handleNextPage()}
             >
-              Далее
+              Оплатить
             </button>
           </div>
 

@@ -68,7 +68,6 @@
         font-size: 16px;
         line-height: 19.36px;
         width: -webkit-fill-available;
-    
         border-radius: 4px;
         background-color: #3B82F6;
         color: #FFFFFF;
@@ -93,6 +92,29 @@
       .next-button:disabled {
         background-color: #D1D5DB;
       }
+    }
+
+    .form-return-button {
+
+      .return-button {
+        font-size: 16px;
+        line-height: 19.36px;
+        width: -webkit-fill-available;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: none;
+    
+        transition: all 0.5s ease-in-out;
+    
+        cursor: pointer;
+      }
+
+      .return-button:focus {
+        outline: none;
+        border: 2px solid #3B82F6;
+      }
+
     }
   }
 }

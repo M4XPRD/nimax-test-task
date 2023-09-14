@@ -1,7 +1,7 @@
 import React, {
   useCallback, useMemo, useState,
 } from 'react';
-import FormContext from './FormContext';
+import FormContext from './FormNavigationContext';
 
 const FormProvider = ({ children }) => {
   const [page, setPage] = useState(0);
@@ -11,6 +11,19 @@ const FormProvider = ({ children }) => {
     1: 'Данные покупателя',
     2: 'Подтверждение заказа',
     4: 'Заказ успешно оплачен',
+  }), []);
+
+  const buttonText = useMemo(() => ({
+    forward: {
+      0: 'Далее',
+      1: 'Далее',
+      2: 'Оплатить',
+      3: 'Забронировать ещё',
+    },
+    back: {
+      1: 'Назад к расчёту стоимости',
+      2: 'Назад к данным покупателя',
+    },
   }), []);
 
   const handleNextPage = useCallback(() => {
@@ -28,12 +41,14 @@ const FormProvider = ({ children }) => {
   const providedData = useMemo(() => ({
     page,
     pageTitle,
+    buttonText,
     handleNextPage,
     handlePreviousPage,
     handleRestartForm,
   }), [
     page,
     pageTitle,
+    buttonText,
     handleNextPage,
     handlePreviousPage,
     handleRestartForm,

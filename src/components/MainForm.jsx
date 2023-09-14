@@ -17,21 +17,29 @@ const MainForm = () => {
       'acceptedAmount',
       'Допустимо максимум 3 ребёнка на 1 взрослого',
       (children, { parent: { adultsAmount } }) => {
-        const acceptedRatio = 0.33;
-        const currentRatio = (adultsAmount / children).toFixed(2);
-        return currentRatio === Infinity ? true : currentRatio >= acceptedRatio;
+        if (adultsAmount > 0 && children > 0) {
+          const acceptedRatio = 0.33;
+          const currentRatio = (adultsAmount / children).toFixed(2);
+          return currentRatio === Infinity ? true : currentRatio >= acceptedRatio;
+        }
+        return true;
       },
     ),
     nightsAmount: yup.number().min(1, 'Нужно остановиться минимум на 1 ночь'),
+    surname: yup.string().matches(/^[^\d]*$/, 'Поле не должно содержать цифры').required('Это поле обязательно'),
+    name: yup.string().matches(/^[^\d]*$/, 'Поле не должно содержать цифры').required('Это поле обязательно'),
+    middleName: yup.string().matches(/^[^\d]*$/, 'Поле не должно содержать цифры'),
+    phoneNumber: yup.string().min(8, 'Проверьте количество символов в номере').required('Это поле обязательно'),
+    birthDate: yup.string().required('Это поле обязательно'),
   });
 
   const f = useFormik({
     initialValues: {
-      adultsAmount: 0,
-      children5To12: 0,
-      childrenBelow5: 0,
+      adultsAmount: '',
+      children5To12: '',
+      childrenBelow5: '',
       roomType: 'Эконом',
-      nightsAmount: 0,
+      nightsAmount: '',
       insurance: false,
       finalSum: 0,
       surname: '',

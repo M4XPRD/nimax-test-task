@@ -6,16 +6,21 @@ import CostCalc from './CostCalc';
 import BuyersDetails from './BuyersDetails';
 import Confirmation from './Confirmation';
 import PaymentSuccess from './PaymentSuccess';
+import useNetwork from '../hooks/networkHook';
 
 const MainForm = () => {
-  const { page, pageTitle, handleNextPage } = useForm();
+  const {
+    page, pageTitle, handleNextPage,
+  } = useForm();
+  const { setNetworkError, setLoading } = useNetwork();
 
   const validationSchema = yup.object().shape({
     adultsAmount: yup
       .number()
       .min(1, 'Должен быть минимум 1 взрослый')
       .required('Это поле обязательно'),
-    children5To12: yup.number(),
+    children5To12: yup
+      .number(),
     childrenBelow5: yup
       .number()
       .test(
@@ -51,7 +56,9 @@ const MainForm = () => {
       .string()
       .min(8, 'Проверьте количество символов в номере')
       .required('Это поле обязательно'),
-    birthDate: yup.string().required('Это поле обязательно'),
+    birthDate: yup
+      .string()
+      .required('Это поле обязательно'),
   });
 
   const f = useFormik({
@@ -71,11 +78,31 @@ const MainForm = () => {
     },
     validationSchema,
     validateOnBlur: true,
-    validateOnChange: true,
+    validateOnChange: false,
     onSubmit: async () => {
-      console.log(f.values.finalSum);
-      handleNextPage();
-      f.resetForm();
+      setLoading(false);
+      setNetworkError(false);
+      try {
+        setLoading(true);
+        const url = 'http://httpbin.org/post';
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(f.values),
+        });
+        const data = await response.json();
+        console.log(data);
+        setTimeout(() => {
+          handleNextPage();
+          f.resetForm();
+          setLoading(false);
+        }, 3000);
+      } catch (e) {
+        setNetworkError(true);
+        setLoading(false);
+      }
     },
   });
 

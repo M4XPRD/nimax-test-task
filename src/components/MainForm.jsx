@@ -59,7 +59,7 @@ const MainForm = () => {
   const inputsMapping = {
     0: <CostCalc f={f} />,
     1: <BuyersDetails f={f} />,
-    2: <Confirmation />,
+    2: <Confirmation f={f} />,
     4: <PaymentSuccess />,
   };
 

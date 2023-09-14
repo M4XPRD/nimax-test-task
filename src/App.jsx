@@ -1,10 +1,13 @@
 import MainForm from './components/MainForm';
-import FormProvider from './contexts/FormProvider';
+import FormNavigationProvider from './contexts/FormNavigationProvider';
+import NetworkProvider from './contexts/NetworkProvider';
 
 const App = () => (
-  <FormProvider>
-    <MainForm />
-  </FormProvider>
+  <FormNavigationProvider>
+    <NetworkProvider>
+      <MainForm />
+    </NetworkProvider>
+  </FormNavigationProvider>
 );
 
 export default App;

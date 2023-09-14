@@ -21,16 +21,22 @@ const FormProvider = ({ children }) => {
     setPage((currentPage) => currentPage - 1);
   }, [setPage]);
 
+  const handleRestartForm = useCallback(() => {
+    setPage(0);
+  }, [setPage]);
+
   const providedData = useMemo(() => ({
     page,
     pageTitle,
     handleNextPage,
     handlePreviousPage,
+    handleRestartForm,
   }), [
     page,
     pageTitle,
     handleNextPage,
     handlePreviousPage,
+    handleRestartForm,
   ]);
 
   return (

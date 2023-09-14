@@ -60,7 +60,7 @@ const MainForm = () => {
     0: <CostCalc f={f} />,
     1: <BuyersDetails f={f} />,
     2: <Confirmation f={f} />,
-    4: <PaymentSuccess />,
+    3: <PaymentSuccess />,
   };
 
   return (

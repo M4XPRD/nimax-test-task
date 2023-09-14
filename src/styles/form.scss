@@ -62,9 +62,9 @@
       font-weight: 600;
     }
   
-    .form-submit {
+    .form-next-button {
   
-      .submit {
+      .next-button {
         font-size: 16px;
         line-height: 19.36px;
         width: -webkit-fill-available;
@@ -79,24 +79,32 @@
         cursor: pointer;
       }
   
-      .submit:hover {
+      .next-button:hover {
         background-color: #60A5FA;
     
         transition: all 0.5s ease-in-out;
       }
   
-      .submit:focus {
+      .next-button:focus {
         outline: none;
         border: 2px solid #3B82F6;
+      }
+
+      .next-button:disabled {
+        background-color: #D1D5DB;
       }
     }
   }
 }
 
-.error {
+.hidden-error-text {
   visibility: hidden;
   color: #EF4444;
   position: absolute;
   font-size: 10px;
   padding: 4px 8px 11px 8px; // должно быть не 4, а 0
+}
+
+.visible-error-text {
+  visibility: visible;
 }

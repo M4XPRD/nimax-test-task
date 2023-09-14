@@ -10,10 +10,10 @@ const prices = {
   insurance: 0.1,
 };
 
-const countPrice = (f) => {
+const countPrice = (values) => {
   const {
     roomType, adultsAmount, children5To12, nightsAmount, insurance,
-  } = f.values;
+  } = values;
   const priceForAdults = prices.roomType[roomType] * adultsAmount;
   const priceForChildren = prices.roomType[roomType] * children5To12 * prices.children5To12;
   const priceForNights = (priceForAdults + priceForChildren) * nightsAmount;

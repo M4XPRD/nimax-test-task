@@ -15,6 +15,10 @@ const shouldDisableButton = ({ f }, page) => {
         || f.errors.name
         || f.errors.phoneNumber
         || f.errors.birthDate
+        || !f.values.surname
+        || !f.values.name
+        || !f.values.phoneNumber
+        || !f.values.birthDate
       );
     }
     default:

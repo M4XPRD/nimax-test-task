@@ -6,11 +6,11 @@ const PaymentSuccess = () => {
   const { handleRestartForm, page, buttonText } = useForm();
 
   return (
-    <div className="form-container">
-      <div className="form-inputs">
-        <div className="form-control">
-          <img src={success} alt="Заказ оплачен" />
-          <p>Заказ успешно оплачен.</p>
+    <div className="form-success-container">
+      <div className="form-success">
+        <div className="success">
+          <img className="success-image" src={success} alt="Заказ оплачен" />
+          <p className="success-text">Заказ успешно оплачен.</p>
         </div>
 
         <div className="form-results">

@@ -68,10 +68,12 @@ const MainForm = () => {
   return (
     <div className="wrapper">
       <form className="form" onSubmit={f.handleSubmit}>
-        <header className="form-header">
-          <h1>Бронирование номера</h1>
-          <p>{pageTitle[page]}</p>
-        </header>
+        {page !== 3 && (
+          <header className="form-header">
+            <h1>Бронирование номера</h1>
+            <p>{pageTitle[page]}</p>
+          </header>
+        )}
         {inputsMapping[page]}
       </form>
     </div>

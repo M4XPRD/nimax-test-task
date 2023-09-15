@@ -14,14 +14,17 @@ const Confirmation = ({ f }) => {
     <>
       {isLoading && (<LoadingAnimation />)}
       <div className="form-container">
-        <div className="form-inputs">
+        <div className="form-confirmation">
           {!isLoading && (
-            <div className="form-control">
-              <p>{`${f.values.surname} ${f.values.name} ${f.values.middleName}`}</p>
+            <div className="form-confirmation-data">
+              <p className="confirmation-name">{`${f.values.surname} ${f.values.name} ${f.values.middleName}`}</p>
               <p>{f.values.phoneNumber}</p>
               <p>{pluralizeNights(f)}</p>
               <p>{pluralizeVisitors(f)}</p>
-              <p>{`К оплате ${f.values.finalSum} ₽`}</p>
+              <p className="confirmation-sum">
+                К оплате
+                <span className="confirmation-sum-number">{` ${f.values.finalSum} ₽`}</span>
+              </p>
               <span
                 className={`hidden-error-text ${
                   isNetworkError ? 'visible-error-text' : ''

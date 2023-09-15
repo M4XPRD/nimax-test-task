@@ -23,14 +23,15 @@ const Confirmation = ({ f }) => {
           <p className="confirmation-sum">
             К оплате
             <span className="confirmation-sum-number">{` ${f.values.finalSum} ₽`}</span>
+            <br />
+            <span
+              className={`hidden-error-text confirmation-error ${
+                isNetworkError ? 'visible-error-text' : ''
+              }`}
+            >
+              Произошла ошибка, попробуйте оплатить ещё раз
+            </span>
           </p>
-          <span
-            className={`hidden-error-text ${
-              isNetworkError ? 'visible-error-text' : ''
-            }`}
-          >
-            Произошла ошибка, попробуйте оплатить ещё раз
-          </span>
         </div>
         )}
 

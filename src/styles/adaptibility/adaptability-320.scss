@@ -156,6 +156,10 @@
   
           .form-next-button {
             padding: 10px 0px 10px 0px;
+
+            .next-button {
+              width: -webkit-fill-available;
+            }
           }
   
           .form-return-button {

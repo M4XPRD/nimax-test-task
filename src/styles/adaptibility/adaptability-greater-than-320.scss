@@ -1,0 +1,41 @@
+@media (min-width: 321px) {
+  .form {
+    padding: 16px 20px 16px 20px;
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      height: 592px;
+
+      .form-control {
+        padding: 0px 0px 16px 0px;
+      
+        label {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      
+      .form-results {
+        align-self: flex-end;
+      
+        .result-sum {
+          font-weight: 600;
+        }
+      
+        .form-next-button {
+          display: flex;
+          justify-content: flex-end;
+      
+          .next-button {
+            width: 128px;
+          }
+        }
+      }
+    }
+  }
+}

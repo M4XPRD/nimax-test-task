@@ -28,6 +28,36 @@
             }
           }
 
+          .form-control-desktop {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .roomtype-container {
+              display: flex;
+              flex-direction: row;
+              width: 600px;
+              justify-content: space-between;
+
+              .radio-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 51%;
+              }
+
+              label {
+                display: flex;
+                gap: 10px;
+              }
+            }
+          }
+
+          .hidden-error-text {
+            transform: translateX(310px);
+          }
+
           .form-result {
             display: flex;
             flex-direction: row;

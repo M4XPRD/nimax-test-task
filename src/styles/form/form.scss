@@ -31,6 +31,7 @@
       padding: 10px 0 10px 0;
 
       .form-control {
+        padding: 0px 0px 16px 0px;
 
         input,
         label {
@@ -60,6 +61,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        padding: 0px 0px 16px 0px;
       }
 
       .form-result {
@@ -215,12 +218,17 @@
   }
 }
 
+.input-error {
+  background-color: #FECACA;
+  color: #EF4444;
+}
+
 .hidden-error-text {
   visibility: hidden;
   color: #EF4444;
   position: absolute;
   font-size: 10px;
-  padding: 4px 8px 11px 8px; // должно быть не 4, а 0
+  padding: 4px 8px 11px 9px; // должно быть не 4, а 0
 }
 
 .visible-error-text {

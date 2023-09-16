@@ -49,7 +49,7 @@ const CostCalc = ({ f }) => {
           handleBlur={handleBlur}
         />
         <RoomType
-          mode={windowWidth < 321 ? 'mobile' : 'desktop'}
+          mode={windowWidth < 641 ? 'mobile' : 'desktop'}
           value={values.roomType}
           handleChange={handleChange}
           handleBlur={handleBlur}
@@ -68,10 +68,10 @@ const CostCalc = ({ f }) => {
           value={values.insurance}
           handleChange={handleChange}
         />
-        {windowWidth > 321 && <FinalSum sum={finalSum} />}
+        {windowWidth > 640 && <FinalSum sum={finalSum} />}
       </div>
       <div className="form-results">
-        {windowWidth < 321 && <FinalSum sum={finalSum} />}
+        {windowWidth < 641 && <FinalSum sum={finalSum} />}
         <NavigationButton
           direction="next"
           page={page}

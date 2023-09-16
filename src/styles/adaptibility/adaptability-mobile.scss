@@ -40,6 +40,14 @@
               border-radius: 4px;
               padding-left: 4px;
             }
+
+            select:focus {
+              outline: 1px solid #3B82F6;
+            }
+
+            select.value {
+              background-color: #3B82F6;
+            }
           }
     
           .form-insurance {

@@ -4,6 +4,7 @@ const RoomType = (props) => {
   const {
     mode, value, handleChange, handleBlur,
   } = props;
+
   return (
     <div className="form-control">
       {mode === 'mobile' ? (

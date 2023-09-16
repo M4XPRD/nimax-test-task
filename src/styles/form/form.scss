@@ -171,13 +171,11 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    padding: 10px 0 10px 0;
-    height: 700px;
+    height: inherit;
 
     .form-success {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
       .success {
         display: flex;

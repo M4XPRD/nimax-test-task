@@ -17,7 +17,10 @@ const InsuranceCheckbox = (props) => {
             checked={value}
             onChange={handleChange}
           />
-          <div className="insurance-circle" />
+          <div className={`insurance-circle ${
+            value ? 'insurance-circle-checked' : ''
+          }`}
+          />
         </label>
       </div>
     </div>

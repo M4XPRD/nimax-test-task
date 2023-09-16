@@ -1,38 +1,74 @@
 @media (min-width: 321px) {
-  .form {
-    padding: 16px 20px 16px 20px;
+  .wrapper {
+    height: 100svh;
 
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .form {
+      padding: 16px 20px 16px 20px;
+  
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        height: 592px;
 
-      height: 592px;
+        .form-inputs {
+          .form-control {
+            padding: 0px 0px 16px 0px;
+          
+            label {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+            }
+  
+            input {
+              width: 50%;
+            }
+          }
 
-      .form-control {
-        padding: 0px 0px 16px 0px;
-      
-        label {
+          .form-result {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .result-sum {
+              width: 51%;
+            }
+          }
+
+          .form-insurance {
+            .insurance {
+              width: 51%;
+            }
+          }
+        }
+        
+        .form-results {
           display: flex;
-          flex-direction: row;
-          align-items: center;
+          flex-direction: row-reverse;
           justify-content: space-between;
-        }
-      }
-      
-      .form-results {
-        align-self: flex-end;
-      
-        .result-sum {
-          font-weight: 600;
-        }
-      
-        .form-next-button {
-          display: flex;
-          justify-content: flex-end;
-      
-          .next-button {
-            width: 128px;
+          width: -webkit-fill-available;
+          align-self: flex-end;
+        
+          .result-sum {
+            font-weight: 600;
+          }
+        
+          .form-next-button {
+            display: flex;
+            justify-content: flex-end;
+        
+            .next-button {
+              width: 128px;
+            }
+          }
+
+          .form-previous-button {
+            .previous-button {
+              width: 248px;
+            }
           }
         }
       }

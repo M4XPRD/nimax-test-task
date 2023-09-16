@@ -22,45 +22,57 @@
     }
   }
 
-  .form-control {
-
-    input,
-    select {
+  .form-container {
+    .form-inputs {
       display: flex;
-      align-items: center;
-  
-      font-family: 'Inter';
-      height: 32px;
-      border: 1px solid #E5E7EB;
-      border-radius: 4px;
-    }
-  
-    input {
-      padding-left: 8px;
-    }
-  
-    input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button {
-      margin-right: 8px;
-  }
-  
-    select {
-      padding-left: 4px;
-    }
-  }
+      flex-direction: column;
+      gap: 8px;
 
-  .form-insurance,
-  .form-result {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      .form-control {
+
+        input,
+        label {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 18px;
+        }
+
+        input {
+          display: flex;
+          align-items: center;
+      
+          font-family: 'Inter';
+          height: 32px;
+          border: 1px solid #E5E7EB;
+          border-radius: 4px;
+          padding-left: 8px;
+        }
+      
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          margin-right: 8px;
+      }
+    }
+    
+      .form-insurance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .form-result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .result-sum {
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   .form-results {
-
-    .result-sum {
-      font-weight: 600;
-    }
   
     .form-next-button {
   

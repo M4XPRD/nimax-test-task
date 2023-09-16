@@ -13,7 +13,7 @@ const PaymentSuccess = () => {
           <img className="success-image" src={success} alt="Заказ оплачен" />
           <p className="success-text">Заказ успешно оплачен.</p>
         </div>
-        <div className="form-results">
+        <div className="form-navigation-buttons">
           <NavigationButton
             direction="next"
             page={page}

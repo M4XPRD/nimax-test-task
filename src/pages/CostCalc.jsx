@@ -70,7 +70,7 @@ const CostCalc = ({ f }) => {
         />
         {windowWidth > 640 && <FinalSum sum={finalSum} />}
       </div>
-      <div className="form-results">
+      <div className="form-navigation-buttons">
         {windowWidth < 641 && <FinalSum sum={finalSum} />}
         <NavigationButton
           direction="next"

@@ -13,7 +13,7 @@ const Confirmation = ({ f }) => {
       {isLoading && <LoadingAnimation />}
       <div className="form-confirmation">
         {!isLoading && <ConfirmationData values={values} />}
-        <div className="form-results">
+        <div className="form-navigation-buttons">
           <NavigationButton
             direction="next"
             page={page}

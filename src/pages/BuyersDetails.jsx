@@ -63,7 +63,7 @@ const BuyersDetails = ({ f }) => {
           handleBlur={handleBlur}
         />
       </div>
-      <div className="form-results">
+      <div className="form-navigation-buttons">
         <NavigationButton
           direction="next"
           page={page}

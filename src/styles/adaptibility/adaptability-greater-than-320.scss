@@ -72,6 +72,28 @@
           }
         }
       }
+
+      .form-success-container {
+        height: unset;
+        .form-success {
+          gap: 10px;
+
+          .success {
+            padding-bottom: 0;
+          }
+
+          .form-results {
+            .form-next-button {
+              display: flex;
+              justify-content: center;
+
+              .last-button {
+                width: 300px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

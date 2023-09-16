@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import formNavigationContext from '../contexts/FormNavigationContext';
 
-const useForm = () => useContext(formNavigationContext);
+const useFormNavigation = () => useContext(formNavigationContext);
 
-export default useForm;
+export default useFormNavigation;

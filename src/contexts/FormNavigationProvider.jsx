@@ -4,6 +4,7 @@ import React, {
 import FormContext from './FormNavigationContext';
 
 const FormProvider = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(0);
 
   const pageTitle = useMemo(() => ({
@@ -14,44 +15,46 @@ const FormProvider = ({ children }) => {
   }), []);
 
   const buttonText = useMemo(() => ({
-    forward: {
+    next: {
       0: 'Далее',
       1: 'Далее',
       2: 'Оплатить',
       3: 'Забронировать ещё',
     },
-    back: {
+    previous: {
       1: 'Назад к расчёту стоимости',
       2: 'Назад к данным покупателя',
     },
   }), []);
 
+  const setLoading = useCallback((loading) => {
+    setIsLoading(loading);
+  }, [setIsLoading]);
+
   const handleNextPage = useCallback(() => {
-    setPage((currentPage) => currentPage + 1);
+    setPage((currentPage) => (currentPage === 3 ? 0 : currentPage + 1));
   }, [setPage]);
 
   const handlePreviousPage = useCallback(() => {
     setPage((currentPage) => currentPage - 1);
   }, [setPage]);
 
-  const handleRestartForm = useCallback(() => {
-    setPage(0);
-  }, [setPage]);
-
   const providedData = useMemo(() => ({
     page,
     pageTitle,
+    isLoading,
+    setLoading,
     buttonText,
     handleNextPage,
     handlePreviousPage,
-    handleRestartForm,
   }), [
     page,
     pageTitle,
+    isLoading,
+    setLoading,
     buttonText,
     handleNextPage,
     handlePreviousPage,
-    handleRestartForm,
   ]);
 
   return (

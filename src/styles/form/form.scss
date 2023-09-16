@@ -105,12 +105,6 @@
           transition: all 0.3s ease-in-out;
         }
 
-      //   input[type=number]::-webkit-inner-spin-button,
-      //   input[type=number]::-webkit-outer-spin-button,
-      //   input[type=date]::-webkit-calendar-picker-indicator {
-      //     margin-right: 8px;
-      // }
-
       .input-error {
         background-color: #FEF2F2;
         outline: none;
@@ -127,7 +121,7 @@
         color: #EF4444;
         position: absolute;
         font-size: 10px;
-        padding: 4px 8px 11px 9px; // должно быть не 4, а 0
+        padding: 4px 8px 11px 9px;
       }
       
       .visible-error-text {

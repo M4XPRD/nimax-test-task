@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
-import useForm from '../hooks/formHook';
 import CostCalc from './CostCalc';
 import BuyersDetails from './BuyersDetails';
 import Confirmation from './Confirmation';
 import PaymentSuccess from './PaymentSuccess';
-import useNetwork from '../hooks/networkHook';
+import useErrors from '../hooks/errorsHook';
 import validationSchema from '../utils/validation/validationSchema';
+import countPrice from '../utils/price/countPrice';
+import shouldDisableButton from '../utils/validation/shouldDisableButton';
+import useFormNavigation from '../hooks/formNavigationHook';
 
 const MainForm = () => {
   const {
-    page, pageTitle, handleNextPage,
-  } = useForm();
-  const { setNetworkError, setLoading } = useNetwork();
+    page, pageTitle, handleNextPage, setLoading,
+  } = useFormNavigation();
+  const { setNetworkError, setValidationError } = useErrors();
 
   const f = useFormik({
     initialValues: {
@@ -57,6 +59,31 @@ const MainForm = () => {
       }
     },
   });
+
+  const {
+    values, errors, setFieldValue,
+  } = f;
+
+  const {
+    adultsAmount, children5To12, roomType, nightsAmount, insurance,
+  } = f.values;
+
+  useEffect(() => {
+    const countedPrice = countPrice(values);
+    setFieldValue('finalSum', countedPrice);
+    setValidationError(page, shouldDisableButton(errors, values, page));
+  }, [
+    adultsAmount,
+    children5To12,
+    roomType,
+    nightsAmount,
+    insurance,
+    values,
+    errors,
+    setFieldValue,
+    setValidationError,
+    page,
+  ]);
 
   const inputsMapping = {
     0: <CostCalc f={f} />,

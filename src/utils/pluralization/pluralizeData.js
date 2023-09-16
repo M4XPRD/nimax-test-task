@@ -1,18 +1,18 @@
 import plural from 'plural-ru';
 
-export const pluralizeNights = (f) => {
-  const nights = plural(f.values.nightsAmount, 'ночь', 'ночи', 'ночей');
-  return `Номер «${f.values.roomType}» на ${f.values.nightsAmount} ${nights}`;
+export const pluralizeNights = (values) => {
+  const nights = plural(values.nightsAmount, 'ночь', 'ночи', 'ночей');
+  return `Номер «${values.roomType}» на ${values.nightsAmount} ${nights}`;
 };
 
 // Макет - 2 взрослых, 2 ребенка от 12 лет и 1 ребенок младше 12 лет
 // На деле - 2 взрослых, 2 ребенка от 5 до 12 лет и 1 ребенок младше 5 лет
 
-export const pluralizeVisitors = (f) => {
-  const { adultsAmount, children5To12, childrenBelow5 } = f.values;
-  const adultsDeclension = plural(f.values.adultsAmount, 'взрослый', 'взрослых', 'взрослых');
-  const children5To12Declension = plural(f.values.children5To12, 'ребёнок', 'ребёнка', 'детей');
-  const childrenBelow5Declension = plural(f.values.childrenBelow5, 'ребёнок', 'ребёнка', 'детей');
+export const pluralizeVisitors = (values) => {
+  const { adultsAmount, children5To12, childrenBelow5 } = values;
+  const adultsDeclension = plural(values.adultsAmount, 'взрослый', 'взрослых', 'взрослых');
+  const children5To12Declension = plural(values.children5To12, 'ребёнок', 'ребёнка', 'детей');
+  const childrenBelow5Declension = plural(values.childrenBelow5, 'ребёнок', 'ребёнка', 'детей');
 
   const adultsPlural = `${adultsAmount} ${adultsDeclension}`;
   const children5To12Plural = children5To12 > 0

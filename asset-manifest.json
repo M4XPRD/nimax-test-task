@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/nimax-test-task/static/css/main.02512d08.css",
-    "main.js": "/nimax-test-task/static/js/main.d5c6c57c.js",
+    "main.css": "/nimax-test-task/static/css/main.15c455bd.css",
+    "main.js": "/nimax-test-task/static/js/main.8e50fec9.js",
     "static/media/paymentSuccess.svg": "/nimax-test-task/static/media/paymentSuccess.424d877eb483565a4f3dc76bd3be528b.svg",
     "index.html": "/nimax-test-task/index.html",
-    "main.02512d08.css.map": "/nimax-test-task/static/css/main.02512d08.css.map",
-    "main.d5c6c57c.js.map": "/nimax-test-task/static/js/main.d5c6c57c.js.map"
+    "static/media/dropdownArrow.svg": "/nimax-test-task/static/media/dropdownArrow.a41bc92b765802f20216.svg",
+    "static/media/dropdownArrowGrey.svg": "/nimax-test-task/static/media/dropdownArrowGrey.594d57c674fdf1f81026.svg",
+    "main.15c455bd.css.map": "/nimax-test-task/static/css/main.15c455bd.css.map",
+    "main.8e50fec9.js.map": "/nimax-test-task/static/js/main.8e50fec9.js.map"
   },
   "entrypoints": [
-    "static/css/main.02512d08.css",
-    "static/js/main.d5c6c57c.js"
+    "static/css/main.15c455bd.css",
+    "static/js/main.8e50fec9.js"
   ]
 }

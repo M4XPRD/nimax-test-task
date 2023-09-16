@@ -1,12 +1,15 @@
-import MainForm from './components/MainForm';
+import MainForm from './pages/MainForm';
 import FormNavigationProvider from './contexts/FormNavigationProvider';
-import NetworkProvider from './contexts/NetworkProvider';
+import ErrorsProvider from './contexts/ErrorsProvider';
+import WindowWidthProvider from './contexts/WindowWidthProvider';
 
 const App = () => (
   <FormNavigationProvider>
-    <NetworkProvider>
-      <MainForm />
-    </NetworkProvider>
+    <ErrorsProvider>
+      <WindowWidthProvider>
+        <MainForm />
+      </WindowWidthProvider>
+    </ErrorsProvider>
   </FormNavigationProvider>
 );
 

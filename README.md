@@ -5,6 +5,21 @@
     * [Условия](#booking-conditions)
     * [Примечания](#booking-notes)
     * [✅Результат](#booking-result)
+  
+## Установка 
+
+```sh
+Все команды запускаются из корня проекта:
+
+# Шаг 1 — Клонируем репозиторий
+$ https://github.com/M4XPRD/nimax-test-task
+
+# Шаг 2 — Устанавливаем зависимости и одновременно запускаем проект
+$ make start
+
+# Если у вас yarn, то перед командой пишем "y"
+$ make y-start
+```
 
 ## Описание
 ### [Макет в Figma](https://www.figma.com/file/yNEjrKeswMfbUcBI1CXkrY/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B4%D0%BB%D1%8F-frontend-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0?node-id=0%3A1&t=1P13RFJob1D937ZH-1)

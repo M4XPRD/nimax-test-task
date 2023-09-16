@@ -41,6 +41,7 @@ const UniversalInput = (props) => {
           placeholder={type === 'tel' ? '+ 7 999 123 45-67' : undefined}
           max={type === 'date' ? '9999-12-31' : undefined}
         />
+        {type === 'number' && <div className="input-number-arrows" />}
       </label>
       <span
         className={`hidden-error-text ${

@@ -52,6 +52,51 @@
           outline: 1px solid transparent;
 
           transition: all 0.3s ease-in-out;
+
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+  }
+        }
+
+        label {
+          position: relative;
+        }
+
+        .input-number-arrows {
+          position: absolute;
+          width: 50px;
+          height: 34px;
+          display: block;
+          right: -9px;
+          pointer-events: none;
+          
+          &:after {
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid #9a9a9a;
+            bottom: 10px;
+          }
+          
+          
+          &:before {
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid #9a9a9a;
+            top: 10px;
+          }
+
+          &:before,
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+          }
         }
         
         input:focus {
@@ -60,11 +105,11 @@
           transition: all 0.3s ease-in-out;
         }
 
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button,
-        input[type=date]::-webkit-calendar-picker-indicator {
-          margin-right: 8px;
-      }
+      //   input[type=number]::-webkit-inner-spin-button,
+      //   input[type=number]::-webkit-outer-spin-button,
+      //   input[type=date]::-webkit-calendar-picker-indicator {
+      //     margin-right: 8px;
+      // }
 
       .input-error {
         background-color: #FEF2F2;

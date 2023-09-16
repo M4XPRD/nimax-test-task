@@ -38,15 +38,23 @@
               height: 32px;
               border: 1px solid #E5E7EB;
               border-radius: 4px;
-              padding-left: 4px;
-            }
+              padding-left: 8px;
+              outline: 1px solid transparent;
+
+              transition: all 0.3s ease-in-out;
+
+              appearance: none;
+              background-image: url('../../assets/dropdownArrow.svg');
+              background-repeat: no-repeat;
+              background-position: right 13.5px top 50%;
+              background-size: 0.65rem auto;
+            }        
 
             select:focus {
               outline: 1px solid #3B82F6;
-            }
+              background-image: url('../../assets/dropdownArrowGrey.svg');
 
-            select.value {
-              background-color: #3B82F6;
+              transition: all 0.3s ease-in-out;
             }
           }
     

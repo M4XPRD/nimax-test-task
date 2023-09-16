@@ -49,10 +49,15 @@
           border: 1px solid #E5E7EB;
           border-radius: 4px;
           padding-left: 8px;
+          outline: 1px solid transparent;
+
+          transition: all 0.3s ease-in-out;
         }
         
         input:focus {
           outline: 1px solid #3B82F6;
+
+          transition: all 0.3s ease-in-out;
         }
 
         input[type=number]::-webkit-inner-spin-button,

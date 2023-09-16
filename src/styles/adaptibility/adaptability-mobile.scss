@@ -124,9 +124,9 @@
               }
             }
         }
-        }
+      }
 
-        .form-results {
+        .form-navigation-buttons {
           display: flex;
           flex-direction: column;
   
@@ -150,6 +150,10 @@
   
           .form-previous-button {
             padding: 0px 0px 10px 0px;
+
+            .previous-button {
+              width: -webkit-fill-available;
+            }
           }
         }
 

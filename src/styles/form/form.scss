@@ -52,8 +52,26 @@
         }
       
         input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=date]::-webkit-calendar-picker-indicator {
           margin-right: 8px;
+      }
+
+      .input-error {
+        background-color: #FECACA;
+        color: #EF4444;
+      }
+      
+      .hidden-error-text {
+        visibility: hidden;
+        color: #EF4444;
+        position: absolute;
+        font-size: 10px;
+        padding: 4px 8px 11px 9px; // должно быть не 4, а 0
+      }
+      
+      .visible-error-text {
+        visibility: visible;
       }
     }
     
@@ -77,13 +95,12 @@
     }
   }
 
-  .form-results {
+  .form-navigation-buttons {
   
     .form-next-button {
   
       .next-button {
         font-size: 16px;
-        line-height: 19.36px;
         border-radius: 4px;
         background-color: #3B82F6;
         color: #FFFFFF;
@@ -96,13 +113,13 @@
   
       .next-button:hover {
         background-color: #60A5FA;
-    
         transition: all 0.5s ease-in-out;
       }
   
       .next-button:focus {
         outline: none;
         border: 2px solid #3B82F6;
+        transition: all 0.5 ease-in-out;
       }
 
       .next-button:disabled {
@@ -114,8 +131,6 @@
 
       .previous-button {
         font-size: 16px;
-        line-height: 19.36px;
-        width: -webkit-fill-available;
         border-radius: 4px;
         background-color: #FFFFFF;
         color: #000000;
@@ -152,6 +167,27 @@
 
       .confirmation-sum {
         padding: 14px 0px 0px 0px;
+
+        .input-error {
+          background-color: #FECACA;
+          color: #EF4444;
+        }
+        
+        .hidden-error-text {
+          visibility: hidden;
+          color: #EF4444;
+          position: absolute;
+          font-size: 10px;
+          padding: 4px 8px 11px 9px; // должно быть не 4, а 0
+        }
+        
+        .visible-error-text {
+          visibility: visible;
+        }
+
+        .confirmation-error {
+          padding: 8px 8px 11px 0px;
+        }
       }
 
       .confirmation-sum-number {
@@ -199,7 +235,7 @@
       }
     }
 
-    .form-results {
+    .form-navigation-buttons {
       display: flex;
       flex-direction: column;
 
@@ -216,25 +252,4 @@
       }
     }
   }
-}
-
-.input-error {
-  background-color: #FECACA;
-  color: #EF4444;
-}
-
-.hidden-error-text {
-  visibility: hidden;
-  color: #EF4444;
-  position: absolute;
-  font-size: 10px;
-  padding: 4px 8px 11px 9px; // должно быть не 4, а 0
-}
-
-.visible-error-text {
-  visibility: visible;
-}
-
-.confirmation-error {
-  padding: 14px 8px 11px 0px;
 }

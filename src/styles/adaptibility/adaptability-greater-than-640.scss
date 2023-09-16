@@ -1,4 +1,4 @@
-@media (min-width: 321px) {
+@media (min-width: 641px) {
   .wrapper {
     height: 100svh;
 
@@ -29,22 +29,18 @@
           }
 
           .form-control-desktop {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+            padding: 0px 0px 16px 0px;
 
             .roomtype-container {
               display: flex;
               flex-direction: row;
-              width: 600px;
               justify-content: space-between;
 
               .radio-container {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                width: 51%;
+                width: 51.5%;
               }
 
               label {
@@ -64,13 +60,13 @@
             justify-content: space-between;
 
             .result-sum {
-              width: 51%;
+              width: 51.5%;
             }
           }
 
           .form-insurance {
             .insurance {
-              width: 51%;
+              width: 51.5%;
             }
           }
         }

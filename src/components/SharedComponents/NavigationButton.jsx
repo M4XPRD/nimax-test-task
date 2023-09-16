@@ -24,7 +24,7 @@ const NavigationButton = (props) => {
     <div className={`form-${direction}-button`}>
       <button
         type={submitButton ? 'submit' : 'button'}
-        className={`${direction}-button`}
+        className={`${direction}-button ${page === 3 && 'last-button'}`}
         disabled={direction === 'next' && isValidationError[page]}
         onClick={handleClick}
       >

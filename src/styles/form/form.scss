@@ -128,6 +128,40 @@
 
     }
   }
+
+  .form-confirmation {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .form-confirmation-data {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .confirmation-name {
+        font-weight: 600;
+      }
+
+      .confirmation-sum {
+        padding: 14px 0px 0px 0px;
+      }
+
+      .confirmation-sum-number {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .lds-wrapper {
+    align-self: center;
+    padding-top: 14em;
+
+    & + .form-confirmation {
+      height: unset;
+    }
+  }
 }
 
 .hidden-error-text {

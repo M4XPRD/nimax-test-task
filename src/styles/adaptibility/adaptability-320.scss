@@ -12,40 +12,6 @@
         
         padding: 10px 0 10px 0;
         height: 572px;
-
-        .lds-wrapper {
-          align-self: center;
-          padding-top: 10em;
-    
-          & + .form-confirmation {
-            height: unset;
-          }
-        }
-        
-        .form-confirmation {
-          height: 556px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-  
-          .form-confirmation-data {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-  
-            .confirmation-name {
-              font-weight: 600;
-            }
-  
-            .confirmation-sum {
-              padding: 14px 0px 0px 0px;
-            }
-  
-            .confirmation-sum-number {
-              font-weight: 600;
-            }
-          }
-        }
     
         .form-inputs {
     
@@ -188,6 +154,10 @@
           .form-previous-button {
             padding: 0px 0px 10px 0px;
           }
+        }
+
+        .lds-wrapper {
+          padding-top: 11em;
         }
       }
       

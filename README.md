@@ -1,6 +1,7 @@
 # Тестовое задание на позицию фронтенд-разработчик (React)
 
 1. [Hotel Booking / Бронирование номера (HTML/CSS, React)](#booking):
+   
     * [Цель задания](#booking-task)
     * [Условия](#booking-conditions)
     * [Примечания](#booking-notes)

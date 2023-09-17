@@ -58,7 +58,14 @@
             -webkit-appearance: none;
             width: 20px;
             height: 20px;
-  }
+          }
+        }
+
+        input[type=date]::-webkit-calendar-picker-indicator {
+          appearance: none;
+          background-image: url('../../assets/datepicker.svg');
+          background-repeat: no-repeat;
+          margin-right: 8px;
         }
 
         label {
@@ -159,6 +166,7 @@
         background-color: #3B82F6;
         color: #FFFFFF;
         border: none;
+        outline: none;
     
         transition: all 0.5s ease-in-out;
     
@@ -171,7 +179,6 @@
       }
   
       .next-button:focus {
-        outline: none;
         border: 2px solid #3B82F6;
         transition: all 0.5 ease-in-out;
       }
@@ -189,14 +196,20 @@
         background-color: #FFFFFF;
         color: #000000;
         border: none;
+        outline: none;
     
         transition: all 0.5s ease-in-out;
     
         cursor: pointer;
       }
 
+      .previous-button:hover {
+        background-color: #60A5FA;
+        color: #FFFFFF;
+        transition: all 0.5s ease-in-out;
+      }
+
       .previous-button:focus {
-        outline: none;
         border: 2px solid #3B82F6;
       }
 

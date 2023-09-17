@@ -17,9 +17,9 @@ const RoomType = (props) => {
             onChange={handleChange}
             onBlur={handleBlur}
           >
-            <option>Эконом</option>
-            <option>Стандарт</option>
-            <option>Люкс</option>
+            <option value="Эконом">Эконом</option>
+            <option value="Стандарт">Стандарт</option>
+            <option value="Люкс">Люкс</option>
           </select>
         </label>
       ) : (

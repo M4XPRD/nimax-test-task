@@ -4,13 +4,13 @@
 }
 
 body {
-  font-family: 'Inter';
-  background-color: #F9FAFB;
+  font-family: var(--font-family);
+  background-color: var(--background-colour);
 }
 
 button {
-  font-family: 'Inter';
-  height: 39px;
+  font-family: var(--font-family);
+  height: var(--button-height);
 }
 
 .wrapper {

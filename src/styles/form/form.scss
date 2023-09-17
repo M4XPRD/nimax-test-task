@@ -11,13 +11,13 @@
     gap: 8px;
 
     h1 {
-      font-size: 32px;
+      font-size: var(--h1-font);
       line-height: 32px;
     }
   
-    p {
+    h2 {
       font-weight: 500;
-      font-size: 18px;
+      font-size: var(--h2-font);
       line-height: 21.78px;
     }
   }
@@ -36,7 +36,7 @@
         input,
         label {
           font-weight: 400;
-          font-size: 16px;
+          font-size: var(--regular-font);
           line-height: 18px;
         }
 
@@ -44,9 +44,9 @@
           display: flex;
           align-items: center;
       
-          font-family: 'Inter';
+          font-family: var(--font-family);
           height: 32px;
-          border: 1px solid #E5E7EB;
+          border: 1px solid var(--input-border-colour);
           border-radius: 4px;
           padding-left: 8px;
           outline: 1px solid transparent;
@@ -81,11 +81,10 @@
           display: block;
           right: -9px;
           pointer-events: none;
-          
           &:after {
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
-            border-top: 6px solid #9a9a9a;
+            border-top: 6px solid var(--input-arrows-colour);
             bottom: 10px;
           }
           
@@ -93,7 +92,7 @@
           &:before {
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
-            border-bottom: 6px solid #9a9a9a;
+            border-bottom: 6px solid var(--input-arrows-colour);
             top: 10px;
           }
 
@@ -108,16 +107,16 @@
         }
         
         input:focus {
-          outline: 1px solid #3B82F6;
+          outline: 1px solid var(--primary-colour);
 
           transition: all 0.3s ease-in-out;
         }
 
       .input-error {
-        background-color: #FEF2F2;
+        background-color: var(--error-field-colour);
         outline: none;
-        border: 1px solid #FECACA;
-        color: #EF4444;
+        border: 1px solid var(--error-border-colour);
+        color: var(--error-text-colour);
       }
 
       .input-error:focus {
@@ -126,9 +125,9 @@
       
       .hidden-error-text {
         visibility: hidden;
-        color: #EF4444;
+        color: var(--error-text-colour);
         position: absolute;
-        font-size: 10px;
+        font-size: var(--error-font);
         padding: 4px 8px 11px 9px;
       }
       
@@ -162,10 +161,10 @@
     .form-next-button {
   
       .next-button {
-        font-size: 16px;
+        font-size: var(--regular-font);
         border-radius: 4px;
-        background-color: #3B82F6;
-        color: #FFFFFF;
+        background-color: var(--primary-colour);
+        color: var(--secondary-colour);
         border: none;
         outline: none;
     
@@ -175,27 +174,27 @@
       }
   
       .next-button:hover {
-        background-color: #60A5FA;
+        background-color: var(--button-hover-colour);
         transition: all 0.5s ease-in-out;
       }
   
       .next-button:focus {
-        border: 2px solid #3B82F6;
+        border: 2px solid var(--primary-colour);
         transition: all 0.5 ease-in-out;
       }
 
       .next-button:disabled {
-        background-color: #D1D5DB;
+        background-color: var(--element-off);;
       }
     }
 
     .form-previous-button {
 
       .previous-button {
-        font-size: 16px;
+        font-size: var(--regular-font);
         border-radius: 4px;
-        background-color: #FFFFFF;
-        color: #000000;
+        background-color: var(--secondary-colour);
+        color: var(--text-colour);
         border: none;
         outline: none;
     
@@ -205,13 +204,13 @@
       }
 
       .previous-button:hover {
-        background-color: #60A5FA;
-        color: #FFFFFF;
+        background-color: var(--button-hover-colour);
+        color: var(--secondary-colour);
         transition: all 0.5s ease-in-out;
       }
 
       .previous-button:focus {
-        border: 2px solid #3B82F6;
+        border: 2px solid var(--primary-colour);
       }
 
     }
@@ -237,15 +236,15 @@
         padding: 14px 0px 0px 0px;
 
         .input-error {
-          background-color: #FECACA;
-          color: #EF4444;
+          background-color: var(--error-border-colour);
+          color: var(--error-text-colour);
         }
         
         .hidden-error-text {
           visibility: hidden;
-          color: #EF4444;
+          color: var(--error-text-colour);
           position: absolute;
-          font-size: 10px;
+          font-size: var(--error-font);
           padding: 4px 8px 11px 9px; // должно быть не 4, а 0
         }
         

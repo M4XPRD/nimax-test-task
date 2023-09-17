@@ -98,7 +98,7 @@ const MainForm = () => {
         {page !== 3 && (
           <header className="form-header">
             <h1>Бронирование номера</h1>
-            <p>{pageTitle[page]}</p>
+            <h2>{pageTitle[page]}</h2>
           </header>
         )}
         {inputsMapping[page]}

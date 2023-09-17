@@ -41,11 +41,16 @@
                 flex-direction: column;
                 gap: 10px;
                 width: 51.5%;
-              }
 
-              label {
-                display: flex;
-                gap: 10px;
+                  
+                label {
+                  display: flex;
+                  gap: 10px;
+
+                  input[type=radio] {
+                    cursor: pointer;
+                  }
+                }
               }
             }
           }
@@ -67,6 +72,10 @@
           .form-insurance {
             .insurance {
               width: 51.5%;
+
+              input[type=checkbox] {
+                cursor: pointer;
+              }
             }
           }
         }

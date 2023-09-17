@@ -66,6 +66,8 @@
           background-image: url('../../assets/datepicker.svg');
           background-repeat: no-repeat;
           margin-right: 8px;
+
+          cursor: pointer;
         }
 
         label {
@@ -102,7 +104,6 @@
             position: absolute;
             left:50%;
             transform: translateX(-50%);
-            cursor: pointer;
           }
         }
         

@@ -17,6 +17,9 @@ $ https://github.com/M4XPRD/nimax-test-task
 # Шаг 2 — Устанавливаем зависимости и одновременно запускаем проект
 $ make start
 
+# Шаг 2.5 — Если нужно снова запустить проект, пишем make dev
+$ make dev
+
 # Если у вас yarn, то перед командой пишем "y"
 $ make y-start
 ```
@@ -106,7 +109,7 @@ $ make y-start
 
 ## ✅ Результат:
 <a name="booking-result"></a>
-Актуальный деплой Vercel прямо [здесь](https://bit.ly/maxprd-nimax-test-task).
+Актуальный деплой Vercel прямо [здесь](https://bit.ly/maxprd-nimax).
 
 ### Что получилось в итоге:
    * Всё написано на React с использованием Formik + Yup

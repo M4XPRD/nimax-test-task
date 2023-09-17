@@ -109,7 +109,7 @@ $ make y-start
 
 ## ✅ Результат:
 <a name="booking-result"></a>
-Актуальный деплой Vercel прямо [здесь](https://bit.ly/maxprd-nimax).
+Актуальный деплой Vercel прямо [здесь](https://nimax-test-task-eight.vercel.app/).
 
 ### Что получилось в итоге:
    * Всё написано на React с использованием Formik + Yup

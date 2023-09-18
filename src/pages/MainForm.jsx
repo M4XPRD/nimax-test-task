@@ -38,7 +38,7 @@ const MainForm = () => {
       setNetworkError(false);
       try {
         setLoading(true);
-        const url = 'http://httpbin.org/post';
+        const url = 'https://httpbin.org/post';
         const response = await fetch(url, {
           method: 'POST',
           headers: {

@@ -157,8 +157,11 @@
   }
 
   .form-navigation-buttons {
-  
+    display: flex;
+    flex-direction: column;
+
     .form-next-button {
+      padding: 10px 0px 10px 0px;
   
       .next-button {
         font-size: var(--regular-font);
@@ -192,6 +195,7 @@
     }
 
     .form-previous-button {
+      padding: 0px 0px 10px 0px;
 
       .previous-button {
         font-size: var(--regular-font);
@@ -306,23 +310,6 @@
           font-size: 20px;
           font-weight: 600;
         }
-      }
-    }
-
-    .form-navigation-buttons {
-      display: flex;
-      flex-direction: column;
-
-      .form-next-button {
-        padding: 10px 0px 10px 0px;
-
-        .last-button {
-          width: -webkit-fill-available;
-        }
-      }
-
-      .form-previous-button {
-        padding: 0px 0px 10px 0px;
       }
     }
   }

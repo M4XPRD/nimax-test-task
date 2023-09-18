@@ -147,9 +147,7 @@
       }
 
         .form-navigation-buttons {
-          display: flex;
-          flex-direction: column;
-  
+
           .form-result {
             display: flex;
             justify-content: space-between;
@@ -161,7 +159,6 @@
           }
 
           .form-next-button {
-            padding: 10px 0px 10px 0px;
 
             .next-button {
               width: -webkit-fill-available;
@@ -169,7 +166,6 @@
           }
   
           .form-previous-button {
-            padding: 0px 0px 10px 0px;
 
             .previous-button {
               width: -webkit-fill-available;
@@ -183,8 +179,10 @@
       }
 
       .form-success-container {
+
         .last-button {
           margin-bottom: 4px;
+          width: -webkit-fill-available;
         }
       }
     }

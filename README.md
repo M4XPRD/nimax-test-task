@@ -111,6 +111,7 @@ $ make y-start
 ## ✅ Результат:
 <a name="booking-result"></a>
 Актуальный деплой Vercel прямо [здесь](https://nimax-test-task-eight.vercel.app/).
+
 ![Screenshot_1](https://github.com/M4XPRD/nimax-test-task/assets/86636158/f84b6f24-b857-4d7a-a570-19966317e4d9)
 ![Screenshot_2](https://github.com/M4XPRD/nimax-test-task/assets/86636158/42569489-0e80-4659-ac9a-5ef739501402)
 ![Screenshot_3](https://github.com/M4XPRD/nimax-test-task/assets/86636158/cd137519-c45c-4955-9674-fb9eac2bbe87)
